@@ -83,9 +83,9 @@
                     <input type="text" placeholder="Bir Haber Linki Giriniz..." id="haberLinkInput">
                     <button id="sorgulaButton" onclick="dogrulamaYap()">Ara</button>
                 </div>
-                
-                <div id="sonucAlani" style="text-align: left;"> 
-                    
+
+                <div id="sonucAlani" style="text-align: left;">
+
                 </div>
             </div>
         </section>
@@ -94,7 +94,7 @@
             <div class="container">
                 <h1>Gündem/Popüler <span>Haberler</span></h1>
                 <div class="boxs" id="gundemContainer">
-                    
+
                 </div>
             </div>
         </section>
@@ -106,17 +106,25 @@
                     <div class="bilgi-box">
                         <div class="text">
                             <h3>Prensiplerimiz</h3>
-                            <p><strong>Tarafsızlık:</strong> Her türlü bilgi doğrulama sürecinde hiçbir kişi, kurum veya görüşe bağlı kalmadan hareket ederiz.</p>
-                            <p><strong>Şeffaflık:</strong> Bilgi kaynaklarımızı açıkça belirtir, doğrulama süreçlerimizi kullanıcılarımızla paylaşırız.</p>
-                            <p><strong>Eğitim ve Farkındalık:</strong> Sadece yanlış bilgileri ortaya çıkarmakla kalmaz, kullanıcıların bu tür içerikleri kendi başına tespit edebilmesini amaçlarız.</p>
-                            <p><strong>Güvenilirlik:</strong> Bilgiye dayalı, kanıtlarla desteklenmiş sonuçlar sunarız.</p>
-                            <p><strong>Toplumsal Sorumluluk:</strong> Gerçeklerin değerini korumayı, dijital etik bilincini yaygınlaştırmayı görev biliriz.</p>
+                            <p><strong>Tarafsızlık:</strong> Her türlü bilgi doğrulama sürecinde hiçbir kişi, kurum veya
+                                görüşe bağlı kalmadan hareket ederiz.</p>
+                            <p><strong>Şeffaflık:</strong> Bilgi kaynaklarımızı açıkça belirtir, doğrulama süreçlerimizi
+                                kullanıcılarımızla paylaşırız.</p>
+                            <p><strong>Eğitim ve Farkındalık:</strong> Sadece yanlış bilgileri ortaya çıkarmakla kalmaz,
+                                kullanıcıların bu tür içerikleri kendi başına tespit edebilmesini amaçlarız.</p>
+                            <p><strong>Güvenilirlik:</strong> Bilgiye dayalı, kanıtlarla desteklenmiş sonuçlar sunarız.
+                            </p>
+                            <p><strong>Toplumsal Sorumluluk:</strong> Gerçeklerin değerini korumayı, dijital etik
+                                bilincini yaygınlaştırmayı görev biliriz.</p>
                         </div>
                     </div>
                     <div class="bilgi-box">
                         <div class="text">
                             <h3>Dezenformasyon Nedir?</h3>
-                            <p>Dezenformasyon, bilerek ve kasıtlı olarak yanlış veya yanıltıcı bilgi yayılması anlamına gelir. Amaç, kamuoyunu manipüle etmek, yanlış yönlendirmek veya toplumsal algıyı etkilemektir. Dezenformasyon, özellikle sosyal medya platformlarında hızla yayılır ve kısa sürede ciddi bilgi kirliliğine yol açar.</p>
+                            <p>Dezenformasyon, bilerek ve kasıtlı olarak yanlış veya yanıltıcı bilgi yayılması anlamına
+                                gelir. Amaç, kamuoyunu manipüle etmek, yanlış yönlendirmek veya toplumsal algıyı
+                                etkilemektir. Dezenformasyon, özellikle sosyal medya platformlarında hızla yayılır ve
+                                kısa sürede ciddi bilgi kirliliğine yol açar.</p>
                         </div>
                     </div>
                     <div class="bilgi-box">
@@ -134,7 +142,8 @@
                     <div class="bilgi-box">
                         <div class="text">
                             <h3>Suphelen.org'tan Bir Öğüt</h3>
-                            <p>Her paylaşım doğru değildir. Suphelendim.org olarak biz, bilgi kirliliğinin en büyük panzehrinin bilinçli kullanıcılar olduğuna inanıyoruz.</p>
+                            <p>Her paylaşım doğru değildir. Suphelendim.org olarak biz, bilgi kirliliğinin en büyük
+                                panzehrinin bilinçli kullanıcılar olduğuna inanıyoruz.</p>
                             <p><strong>Unutmayın:</strong> “Gördüğünüz her şeye inanmayın — doğrulayın.”</p>
                         </div>
                     </div>
@@ -158,7 +167,8 @@
             <div class="footer-socials">
                 <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
                 <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="https://github.com/karadag07/Dezenformasyon_Ile_Mucadele" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://github.com/karadag07/Dezenformasyon_Ile_Mucadele" target="_blank"
+                    aria-label="GitHub"><i class="bi bi-github"></i></a>
                 <a href="#" aria-label="E-posta"><i class="bi bi-envelope"></i></a>
             </div>
             <p class="copy">© 2025 Suphelendim.org | Tüm Hakları Saklıdır.</p>
@@ -173,7 +183,7 @@
         function getHukum(text) {
             // Güvenilirlik hükmünü daha esnek bulmak için regex güncellendi
             const match = text.match(/#### ✅ Güvenilirlik Hükmü\s*\n?\s*\*\*(.*?)\*\*/i);
-             // Büyük/küçük harf duyarsız yapıldı ve olası satır başını yakalamak eklendi
+            // Büyük/küçük harf duyarsız yapıldı ve olası satır başını yakalamak eklendi
             if (match && match[1]) {
                 return match[1].trim().toUpperCase(); // Her zaman büyük harf döndür
             }
@@ -191,7 +201,7 @@
                 let baslik;
 
                 // Hükme göre stil sınıfı ve başlık belirle
-                 if (hukum.includes("DOĞRULANDI")) {
+                if (hukum.includes("DOĞRULANDI")) {
                     className = 'dogru';
                     baslik = '✅ BU HABER DOĞRU GÖRÜNÜYOR';
                 } else if (hukum.includes("YANLIŞ")) {
@@ -237,13 +247,13 @@
 
             // Linkin geçerli olup olmadığını kontrol et
             if (!link) {
-                 renderSonuc('BELİRSİZ', '### ⚠️ Uyarı\nLütfen geçerli bir haber linki girin.');
-                 // Kullanıcıya hemen göstermek için 'active' sınıfını ekle
-                 requestAnimationFrame(() => {
-                      sonucAlani.classList.add('active');
-                 });
-                 linkInput.focus(); // Kullanıcının tekrar yazması için input'a odaklan
-                 return; // Fonksiyondan çık
+                renderSonuc('BELİRSİZ', '### ⚠️ Uyarı\nLütfen geçerli bir haber linki girin.');
+                // Kullanıcıya hemen göstermek için 'active' sınıfını ekle
+                requestAnimationFrame(() => {
+                    sonucAlani.classList.add('active');
+                });
+                linkInput.focus(); // Kullanıcının tekrar yazması için input'a odaklan
+                return; // Fonksiyondan çık
             }
 
             // Arama butonunu devre dışı bırak ve yükleniyor animasyonu göster
@@ -252,8 +262,8 @@
 
             // Önceki sonuçları gizle ve yeni 'yükleniyor' mesajını göster
             sonucAlani.classList.remove('active');
-             // Geçici 'yükleniyor' kutusu
-             sonucAlani.innerHTML = `
+            // Geçici 'yükleniyor' kutusu
+            sonucAlani.innerHTML = `
                 <div class="sonuc-kutu belirsiz">
                      <h2>🔎 Haber kontrol ediliyor...</h2>
                      <hr>
@@ -261,9 +271,9 @@
                 </div>
             `;
             // Yükleniyor kutusunu göster
-             requestAnimationFrame(() => {
-                  sonucAlani.classList.add('active');
-             });
+            requestAnimationFrame(() => {
+                sonucAlani.classList.add('active');
+            });
 
 
             try {
@@ -282,12 +292,12 @@
                     const hukum = getHukum(veri.ozet_ve_dogrulama); // Hükmü çıkar
                     renderSonuc(hukum, veri.ozet_ve_dogrulama); // Sonucu ekrana bas
                 } else {
-                     // Sunucudan hata mesajı geldiyse
-                     renderSonuc('BELİRSİZ', `### ❌ Hata Oluştu\n**Sunucu Hatası:** ${veri.hata || 'Bilinmeyen bir sunucu hatası oluştu.'}`);
+                    // Sunucudan hata mesajı geldiyse
+                    renderSonuc('BELİRSİZ', `### ❌ Hata Oluştu\n**Sunucu Hatası:** ${veri.hata || 'Bilinmeyen bir sunucu hatası oluştu.'}`);
                 }
             } catch (hata) {
                 // Ağ hatası veya fetch sırasında başka bir hata oluştuysa
-                 renderSonuc('BELİRSİZ', `### ❌ Bağlantı Hatası\nSunucuya ulaşılamıyor. Lütfen **Python sunucunuzun (app.py)** çalıştığından ve internet bağlantınızın olduğundan emin olun.`);
+                renderSonuc('BELİRSİZ', `### ❌ Bağlantı Hatası\nSunucuya ulaşılamıyor. Lütfen **Python sunucunuzun (app.py)** çalıştığından ve internet bağlantınızın olduğundan emin olun.`);
                 console.error("Fetch Hatası:", hata); // Teknik detayları konsola yazdır
             } finally {
                 // İstek tamamlandığında veya hata oluştuğunda butonu tekrar aktif et
@@ -328,18 +338,18 @@
 
                 // Her bir haber için HTML oluştur ve konteynıra ekle
                 haberler.forEach(haber => {
-                     // Tarihi daha okunabilir formata çevir
-                     let yayimTarihi = 'Bilinmiyor';
-                     try {
-                          // Gelen tarih formatını parse etmeye çalış (RFC 822 veya benzeri)
-                          yayimTarihi = new Date(haber.yayim_tarihi).toLocaleString('tr-TR', {
-                               year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
-                          });
-                     } catch (e) {
-                          console.error("Tarih formatı hatası:", haber.yayim_tarihi, e);
-                          // Eğer parse edilemezse, ham veriyi göster veya 'Bilinmiyor' kalsın
-                          yayimTarihi = haber.yayim_tarihi || 'Bilinmiyor';
-                     }
+                    // Tarihi daha okunabilir formata çevir
+                    let yayimTarihi = 'Bilinmiyor';
+                    try {
+                        // Gelen tarih formatını parse etmeye çalış (RFC 822 veya benzeri)
+                        yayimTarihi = new Date(haber.yayim_tarihi).toLocaleString('tr-TR', {
+                            year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+                        });
+                    } catch (e) {
+                        console.error("Tarih formatı hatası:", haber.yayim_tarihi, e);
+                        // Eğer parse edilemezse, ham veriyi göster veya 'Bilinmiyor' kalsın
+                        yayimTarihi = haber.yayim_tarihi || 'Bilinmiyor';
+                    }
 
 
                     const haberHtml = `
@@ -368,4 +378,5 @@
 
     </script>
 </body>
+
 </html>
