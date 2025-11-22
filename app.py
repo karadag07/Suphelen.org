@@ -90,6 +90,7 @@ def get_all_afad_earthquakes():
                 "Şehir": sehir
             })
     return records
+
 # ----------------------------------------------------
 # GÜNDEM HABERLERİ ÇEKME FONKSİYONLARI
 # ----------------------------------------------------
@@ -174,10 +175,15 @@ AFAD kayıtlarında **{d['Şehir']}** bölgesinde **{d['Büyüklük']}** büyük
 # ----------------------------------------------------
 # 2. FLASK UYGULAMASI VE API
 # ----------------------------------------------------
+from flask import send_from_directory
 
 # --- Konfigürasyon ---
 app = Flask(__name__)
-CORS(app) 
+CORS(app)
+
+# Proje kök dizini (index.html ve search_page.html burada)
+BASE_DIR = pathlib.Path(__file__).parent
+
 
 # --- HATA AYIKLAMA KONTROLLERİ ---
 env_path = pathlib.Path('.env')
@@ -204,6 +210,19 @@ GÜVENİLİR_SİTELER = [
     "koeri.boun.edu.tr (Kandilli Rasathanesi)"
 ]
 
+# ---------- ÖN YÜZ ROUTE'LARI ----------
+
+@app.route('/')
+def index():
+    # Proje kök dizinindeki index.html dosyasını döner
+    return send_from_directory(str(BASE_DIR), 'index.html')
+
+@app.route('/search')
+def search_page():
+    # Proje kök dizinindeki search_page.html dosyasını döner
+    return send_from_directory(str(BASE_DIR), 'search_page.html')
+
+# ---------- API ROUTE'LARI ----------
 
 @app.route('/api/dogrula', methods=['POST'])
 def dogrulama_islemi():
@@ -235,7 +254,6 @@ def dogrulama_islemi():
                 "orijinal_link": haber_linki,
                 "kaynak": "AFAD"
             })
-
 
     # 3. AFAD/DEPREM Değilse, GEMINI'Yİ ÇALIŞTIR
     
@@ -302,6 +320,7 @@ def dogrulama_islemi():
 
     except Exception as e:
         return jsonify({"hata": f"Gemini API hatası: {e}"}), 500
+
 # ----------------------------------------------------
 # GÜNDEM HABERLERİ API UÇ NOKTASI
 # ----------------------------------------------------
@@ -339,4 +358,4 @@ if __name__ == '__main__':
     # Zamanlayıcıyı başlat
     start_scheduler() 
     # use_reloader=False ayarı, debug=True iken Flask'in iki kez başlamasını engeller.
-    app.run(debug=True, port=5000, use_reloader=False) 
+    app.run(debug=True, port=5000, use_reloader=False)
