@@ -1,0 +1,25 @@
+{
+  "name": "dezenformasyon_ile_mucadele",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karadag07/Dezenformasyon_Ile_Mucadele.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karadag07/Dezenformasyon_Ile_Mucadele/issues"
+  },
+  "homepage": "https://github.com/karadag07/Dezenformasyon_Ile_Mucadele#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "sass": "^1.93.2"
+  }
+}

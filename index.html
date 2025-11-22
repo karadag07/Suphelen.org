@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suphelendim.org</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon/question-circle-fill.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg   bg-transparent  text-white">
+            <div class="container">
+
+                <a href="#home" class="navbar-brand "> Suphelen<span>.org</span></a>
+
+                <div class="burger">
+                    <button class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto ">
+                            <li class="nav-item">
+                                <a href="#home" class="nav-link pe-3">Anasayfa</a>
+                            </li>
+                            <li class="nav-item pe-3">
+                                <a href="#sorgulat" class="nav-link">Sorgulat</a>
+                            </li>
+                            <li class="nav-item pe-3">
+                                <a href="#gundem" class="nav-link">Gündem</a>
+                            </li>
+                            <li class="nav-item pe-3">
+                                <a href="#hakkimizda" class="nav-link">Hakkımızda</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reklam " id="home">
+            <div class="container">
+                <div class="png">
+                    <div class="text">
+                        <p>Her paylaşım doğru değildir. Şüphe et, kontrol et.</p>
+                    </div>
+                    <img src="img/reklammpng.png" alt="Şüphe ve kontrolü simgeleyen görsel">
+                </div>
+
+                <div class="bilgi-box">
+                    <div class="text">
+                        <h3>Biz Kimiz ve Neden Buradayız?</h3>
+                        <p>
+                            Suphelendim.org, dijital çağın en büyük sorunlarından biri olan dezenformasyonla
+                            mücadele amacıyla kurulmuş bağımsız bir platformdur.
+                            Amacımız, internet ve sosyal medya üzerinden yayılan yanlış, manipülatif veya kasıtlı
+                            olarak çarpıtılmış bilgileri fark etmenizi sağlamak,
+                            doğru bilgiye ulaşma bilincini güçlendirmektir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="arama-section" id="sorgulat">
+            <div class="container">
+                <h1>Doğruluğunu Sorgulamak <span>için:</span></h1>
+                <div class="button-group">
+                    <input type="text" placeholder="Bir Haber Linki Giriniz..." id="haberLinkInput">
+                    <button id="sorgulaButton" onclick="dogrulamaYap()">Ara</button>
+                </div>
+                
+                <div id="sonucAlani" style="text-align: left;"> 
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="gundem-section" id="gundem">
+            <div class="container">
+                <h1>Gündem/Popüler <span>Haberler</span></h1>
+                <div class="boxs" id="gundemContainer">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="bilgi-section" id="hakkimizda">
+            <div class="container">
+                <div class="bilgi-boxs">
+                    <h1>Hakk<span>ımızda</span></h1>
+                    <div class="bilgi-box">
+                        <div class="text">
+                            <h3>Prensiplerimiz</h3>
+                            <p><strong>Tarafsızlık:</strong> Her türlü bilgi doğrulama sürecinde hiçbir kişi, kurum veya görüşe bağlı kalmadan hareket ederiz.</p>
+                            <p><strong>Şeffaflık:</strong> Bilgi kaynaklarımızı açıkça belirtir, doğrulama süreçlerimizi kullanıcılarımızla paylaşırız.</p>
+                            <p><strong>Eğitim ve Farkındalık:</strong> Sadece yanlış bilgileri ortaya çıkarmakla kalmaz, kullanıcıların bu tür içerikleri kendi başına tespit edebilmesini amaçlarız.</p>
+                            <p><strong>Güvenilirlik:</strong> Bilgiye dayalı, kanıtlarla desteklenmiş sonuçlar sunarız.</p>
+                            <p><strong>Toplumsal Sorumluluk:</strong> Gerçeklerin değerini korumayı, dijital etik bilincini yaygınlaştırmayı görev biliriz.</p>
+                        </div>
+                    </div>
+                    <div class="bilgi-box">
+                        <div class="text">
+                            <h3>Dezenformasyon Nedir?</h3>
+                            <p>Dezenformasyon, bilerek ve kasıtlı olarak yanlış veya yanıltıcı bilgi yayılması anlamına gelir. Amaç, kamuoyunu manipüle etmek, yanlış yönlendirmek veya toplumsal algıyı etkilemektir. Dezenformasyon, özellikle sosyal medya platformlarında hızla yayılır ve kısa sürede ciddi bilgi kirliliğine yol açar.</p>
+                        </div>
+                    </div>
+                    <div class="bilgi-box">
+                        <div class="text">
+                            <h3>Amaçlarımız</h3>
+                            <ul>
+                                <li>İnsanların güvenilir bilgiye ulaşma becerilerini geliştirmek</li>
+                                <li>Yanlış bilgilere karşı dijital direnç oluşturmak</li>
+                                <li>Medya okuryazarlığını ve eleştirel düşünmeyi teşvik etmek</li>
+                                <li>Gerçekleri, doğrulanabilir verilerle kamuoyuna sunmak</li>
+                                <li>Toplumda “şüphe et, kontrol et, doğrula” kültürünü yaymak</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bilgi-box">
+                        <div class="text">
+                            <h3>Suphelen.org'tan Bir Öğüt</h3>
+                            <p>Her paylaşım doğru değildir. Suphelendim.org olarak biz, bilgi kirliliğinin en büyük panzehrinin bilinçli kullanıcılar olduğuna inanıyoruz.</p>
+                            <p><strong>Unutmayın:</strong> “Gördüğünüz her şeye inanmayın — doğrulayın.”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <a href="#home">Suphelendim<span>.org</span></a>
+                <p>Gerçeği arayanlar için doğru bilginin adresi.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Ana Sayfa</a>
+                <a href="#sorgulat">Sorgulat</a>
+                <a href="#gundem">Gündem</a>
+                <a href="#hakkimizda">Hakkımızda</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/karadag07/Dezenformasyon_Ile_Mucadele" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a href="#" aria-label="E-posta"><i class="bi bi-envelope"></i></a>
+            </div>
+            <p class="copy">© 2025 Suphelendim.org | Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // --- DOĞRULAMA FONKSİYONLARI ---
+
+        // Hüküm kelimesini (DOĞRULANDI, YANLIŞ, HENÜZ DOĞRULANAMADI) metinden çeker
+        function getHukum(text) {
+            // Güvenilirlik hükmünü daha esnek bulmak için regex güncellendi
+            const match = text.match(/#### ✅ Güvenilirlik Hükmü\s*\n?\s*\*\*(.*?)\*\*/i);
+             // Büyük/küçük harf duyarsız yapıldı ve olası satır başını yakalamak eklendi
+            if (match && match[1]) {
+                return match[1].trim().toUpperCase(); // Her zaman büyük harf döndür
+            }
+            return "BELİRSİZ"; // Bulamazsa belirsiz döndür
+        }
+
+        // Sonuçları ekrana basan fonksiyon (Markdown'ı HTML'e çevirir)
+        function renderSonuc(hukum, tamMetin) {
+            const sonucAlani = document.getElementById('sonucAlani');
+            sonucAlani.classList.remove('active'); // Önce kapat (animasyon için)
+
+            // Kısa bir gecikme ekleyerek animasyonun düzgün çalışmasını sağla
+            setTimeout(() => {
+                let className;
+                let baslik;
+
+                // Hükme göre stil sınıfı ve başlık belirle
+                 if (hukum.includes("DOĞRULANDI")) {
+                    className = 'dogru';
+                    baslik = '✅ BU HABER DOĞRU GÖRÜNÜYOR';
+                } else if (hukum.includes("YANLIŞ")) {
+                    className = 'yanlis';
+                    baslik = '❌ BU HABER YANLIŞ VEYA HATALI';
+                } else { // HENÜZ DOĞRULANAMADI veya BELİRSİZ
+                    className = 'belirsiz';
+                    baslik = '⚠️ DOĞRULUK TEYİT EDİLEMEDİ';
+                }
+
+                // Backend'den gelen Markdown benzeri metni HTML'e çevir
+                const htmlMetin = tamMetin
+                    .replace(/### (.*?)\n/g, '<h3>$1</h3>')        // ### Başlık -> <h3>Başlık</h3>
+                    .replace(/#### (.*?)\n/g, '<h4>$1</h4>')      // #### Başlık -> <h4>Başlık</h4>
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **Kalın** -> <strong>Kalın</strong>
+                    .replace(/\n/g, '<br>');                       // Satır sonlarını <br> ile değiştir
+
+                // Sonuç kutusunun içeriğini oluştur
+                sonucAlani.innerHTML = `
+                  <div class="sonuc-kutu ${className}">
+                    <h2>${baslik}</h2>
+                    <hr>
+                    <div>${htmlMetin}</div> 
+                  </div>
+                `;
+
+                // Sonuç kutusunu yavaşça görünür yap (animasyon)
+                requestAnimationFrame(() => { // Tarayıcının çizime hazır olmasını bekle
+                    sonucAlani.classList.add('active');
+                });
+            }, 50); // Çok kısa bir gecikme (50ms) animasyon için yeterli
+        }
+
+
+        // Ana doğrulama fonksiyonu: Butona basıldığında çalışır
+        async function dogrulamaYap() {
+            const sonucAlani = document.getElementById('sonucAlani');
+            const buton = document.getElementById('sorgulaButton');
+            const linkInput = document.getElementById('haberLinkInput'); // Input elementini al
+            const link = linkInput.value.trim(); // Değeri al ve boşlukları temizle
+
+            const apiURL = 'http://127.0.0.1:5000/api/dogrula'; // Backend API adresi
+
+            // Linkin geçerli olup olmadığını kontrol et
+            if (!link) {
+                 renderSonuc('BELİRSİZ', '### ⚠️ Uyarı\nLütfen geçerli bir haber linki girin.');
+                 // Kullanıcıya hemen göstermek için 'active' sınıfını ekle
+                 requestAnimationFrame(() => {
+                      sonucAlani.classList.add('active');
+                 });
+                 linkInput.focus(); // Kullanıcının tekrar yazması için input'a odaklan
+                 return; // Fonksiyondan çık
+            }
+
+            // Arama butonunu devre dışı bırak ve yükleniyor animasyonu göster
+            buton.disabled = true;
+            buton.innerHTML = `<span class="spinner"></span> Kontrol ediliyor...`;
+
+            // Önceki sonuçları gizle ve yeni 'yükleniyor' mesajını göster
+            sonucAlani.classList.remove('active');
+             // Geçici 'yükleniyor' kutusu
+             sonucAlani.innerHTML = `
+                <div class="sonuc-kutu belirsiz">
+                     <h2>🔎 Haber kontrol ediliyor...</h2>
+                     <hr>
+                     <p>Lütfen bekleyin. Bu işlem genellikle 5-15 saniye sürebilir.</p>
+                </div>
+            `;
+            // Yükleniyor kutusunu göster
+             requestAnimationFrame(() => {
+                  sonucAlani.classList.add('active');
+             });
+
+
+            try {
+                // Backend'e POST isteği gönder
+                const response = await fetch(apiURL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ link: link }) // Linki JSON formatında gönder
+                });
+
+                // Sunucudan gelen yanıtı JSON olarak al
+                const veri = await response.json();
+
+                // Yanıt başarılıysa ve backend 'basari: true' döndürdüyse
+                if (response.ok && veri.basari) {
+                    const hukum = getHukum(veri.ozet_ve_dogrulama); // Hükmü çıkar
+                    renderSonuc(hukum, veri.ozet_ve_dogrulama); // Sonucu ekrana bas
+                } else {
+                     // Sunucudan hata mesajı geldiyse
+                     renderSonuc('BELİRSİZ', `### ❌ Hata Oluştu\n**Sunucu Hatası:** ${veri.hata || 'Bilinmeyen bir sunucu hatası oluştu.'}`);
+                }
+            } catch (hata) {
+                // Ağ hatası veya fetch sırasında başka bir hata oluştuysa
+                 renderSonuc('BELİRSİZ', `### ❌ Bağlantı Hatası\nSunucuya ulaşılamıyor. Lütfen **Python sunucunuzun (app.py)** çalıştığından ve internet bağlantınızın olduğundan emin olun.`);
+                console.error("Fetch Hatası:", hata); // Teknik detayları konsola yazdır
+            } finally {
+                // İstek tamamlandığında veya hata oluştuğunda butonu tekrar aktif et
+                buton.disabled = false;
+                buton.innerHTML = 'Ara';
+            }
+        }
+
+
+        // --- GÜNDEM HABERLERİ FONKSİYONU ---
+
+        // Bu fonksiyon, sayfa yüklendiğinde gündem haberlerini backend'den çeker ve ekrana basar.
+        async function gundemHaberleriniYukle() {
+            const gundemContainer = document.getElementById('gundemContainer');
+            const apiURL = 'http://127.0.0.1:5000/api/gundem'; // Gündem API adresi
+
+            // Başlangıçta yükleniyor mesajı göster
+            gundemContainer.innerHTML = '<p style="color: #ccc;">Gündem haberleri yükleniyor...</p>';
+
+            try {
+                // Backend'den haberleri GET isteği ile al
+                const response = await fetch(apiURL);
+                if (!response.ok) { // İstek başarısızsa hata fırlat
+                    throw new Error(`Sunucu hatası: ${response.status}`);
+                }
+
+                // Gelen yanıtı JSON olarak işle
+                const haberler = await response.json();
+
+                // Haber konteynerını temizle
+                gundemContainer.innerHTML = '';
+
+                // Eğer haber yoksa bilgi mesajı göster
+                if (!haberler || haberler.length === 0) {
+                    gundemContainer.innerHTML = '<p style="color: #ccc;">Gösterilecek güncel haber bulunamadı.</p>';
+                    return; // Fonksiyondan çık
+                }
+
+                // Her bir haber için HTML oluştur ve konteynıra ekle
+                haberler.forEach(haber => {
+                     // Tarihi daha okunabilir formata çevir
+                     let yayimTarihi = 'Bilinmiyor';
+                     try {
+                          // Gelen tarih formatını parse etmeye çalış (RFC 822 veya benzeri)
+                          yayimTarihi = new Date(haber.yayim_tarihi).toLocaleString('tr-TR', {
+                               year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+                          });
+                     } catch (e) {
+                          console.error("Tarih formatı hatası:", haber.yayim_tarihi, e);
+                          // Eğer parse edilemezse, ham veriyi göster veya 'Bilinmiyor' kalsın
+                          yayimTarihi = haber.yayim_tarihi || 'Bilinmiyor';
+                     }
+
+
+                    const haberHtml = `
+                        <div class="box">
+                            <a href="${haber.link}" target="_blank" rel="noopener noreferrer" class="haber-link">
+                                <h3>${haber.baslik}</h3>
+                                <p class="kaynak">Kaynak: BBC NEWS</p>
+                                <p class="tarih">Yayım: ${yayimTarihi}</p>
+                            </a>
+                        </div>
+                    `;
+                    gundemContainer.insertAdjacentHTML('beforeend', haberHtml); // innerHTML+= yerine daha performanslı
+                });
+
+            } catch (hata) {
+                console.error('Gündem haberleri yüklenirken hata oluştu:', hata);
+                // Hata durumunda kullanıcıya bilgi ver
+                gundemContainer.innerHTML = `<p style="color: red; text-align: center;">Haberler yüklenemedi. Sunucu bağlantısını kontrol edin.</p>`;
+            }
+        }
+
+        // --- SAYFA YÜKLENDİĞİNDE ÇALIŞACAK KOD ---
+
+        // Sayfa tamamen yüklendiğinde (DOMContentLoaded) gündem haberlerini yükle
+        document.addEventListener('DOMContentLoaded', gundemHaberleriniYukle);
+
+    </script>
+</body>
+</html>
