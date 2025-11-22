@@ -235,7 +235,10 @@ def css_files(filename):
     return send_from_directory('css', filename)
 
 
-
+@app.route('/img/<path:filename>')
+def img_files(filename):
+    # static/img klasöründeki dosyaları /img/... ile servis et
+    return send_from_directory('static/img', filename)
 
 
 @app.route('/static/<path:filename>')
