@@ -235,9 +235,7 @@ def css_files(filename):
     return send_from_directory('css', filename)
 
 
-@app.route('/img/<path:filename>')
-def img_files(filename):
-    return send_from_directory('img', filename)
+
 
 
 @app.route('/static/<path:filename>')
